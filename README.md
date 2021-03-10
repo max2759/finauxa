@@ -8,7 +8,7 @@ In order to have a first approach before the training , you could fork and creat
 
 ## POC
 ###
-use librairies from package.json
+use libraries from package.json
 
 ### Statement ###
 2 peoples must communicate each others
