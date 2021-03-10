@@ -12,7 +12,8 @@ export const VisiblePanel = ( props ) => {
     return (
         <>
             <div className="content">
-                <h1>{props.label.compta.generalAccounting}</h1>
+                <h1></h1>
+                comments must be visible
 
 
             </div>
