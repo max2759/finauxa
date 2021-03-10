@@ -6,8 +6,16 @@ Welcome to Ulegalize Academy
 
 In order to have a first approach before the training , you could fork and create 
 
-### Statement ###
+## POC
+###
+use librairies from package.json
 
+### Statement ###
+2 peoples must communicate each others
+Provide a discussion between them.  
+
+Here is a mock to reproduce
+![image](img/frame.png)
 
 
 ### Contribution guidelines ###
