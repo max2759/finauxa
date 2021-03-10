@@ -1,21 +1,14 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Welcome to Ulegalize Academy
 
-### What is this repository for? ###
+### Create a Proof of Concept ReactJs ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+In order to have a first approach before the training , you could fork and create 
 
-### How do I get set up? ###
+### Statement ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+
 
 ### Contribution guidelines ###
 
