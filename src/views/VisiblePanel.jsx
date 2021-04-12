@@ -4,7 +4,7 @@ import React from 'react';
 
 const isNil = require( 'lodash/isNil' );
 
-require( 'moment/locale/fr' );
+
 
 export const VisiblePanel = ( props ) => {
 
@@ -14,8 +14,6 @@ export const VisiblePanel = ( props ) => {
             <div className="content">
                 <h1></h1>
                 comments must be visible
-
-
             </div>
 
         </>
