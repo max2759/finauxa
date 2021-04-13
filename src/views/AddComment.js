@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Card, CardBody, Button, Form, FormGroup, Label, Input, FormText, FormFeedback } from 'reactstrap';
 
 const AddComment= ({addNewComment}) => {
 
@@ -8,6 +9,8 @@ const AddComment= ({addNewComment}) => {
     const [addEmail, setAddEmail] = useState('')
 
     const [addGender,setAddGender] = useState('')
+
+    
 
 
     const handleForm = (e) => {
@@ -19,29 +22,35 @@ const AddComment= ({addNewComment}) => {
     }
 
     return (
-        <form className="mt-4" onSubmit={handleForm}>
-            <div className="card card-body">
-                <div className="form-group">
-                  <label>Email</label>
-                  <input type="email" className="form-control" value={addEmail} onChange={(e)=>{setAddEmail(e.target.value)}}/>
-                </div>
 
-                <div className="form-group">
-                  <label>Gender</label>
-                  <select className="form-control" value={addGender} onChange={(e =>{setAddGender(e.target.value)})}>
-                        <option value=""></option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div className="form-group">
-                    <label>Comments</label>
-                    <textarea className="form-control" rows="3" value={addComment} onChange={(e)=> {setAddComment(e.target.value)}}></textarea>                
-                </div>
-                <button type="submit" className="btn btn-primary mt-4">Save</button>
-            </div>
-        </form>
+        <Form onSubmit={handleForm} className="m-5"> 
+            <Card>
+                <CardBody>
+                    <FormGroup>
+                        <Label>Email</Label>
+                        <Input type="email" value={addEmail} onChange={(e)=>{setAddEmail(e.target.value)}} placeholder="Votre email ici" />      
+                        <FormFeedback valid>Sweet! that name is available</FormFeedback>
+                    </FormGroup>
+
+                    <FormGroup>
+                        <Label >Gender</Label>
+                        <Input type="select" value={addGender} onChange={(e =>{setAddGender(e.target.value)})}>
+                            <option value="">--Gender--</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </Input>
+                    </FormGroup>
+
+                    <FormGroup>
+                        <Label>Comments</Label>
+                        <Input type="textarea" value={addComment} onChange={(e)=> {setAddComment(e.target.value)}}/>
+                    </FormGroup>
+
+                    <Button color="primary">Submit</Button>
+                </CardBody>
+            </Card>
+        </Form>
     )
 }
 

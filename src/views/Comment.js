@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import AddComment from './AddComment'
 import { v4 as uuidv4 } from 'uuid';
+import { Alert, Card } from 'reactstrap';
 
 
 const Comment = () => {
@@ -20,7 +21,7 @@ const Comment = () => {
 
         if(comment.comment !== ''){
             return(
-                        <div className="card mt-2 mb-2 p-2" key={comment.id}>
+                        <Card className="card mt-2 mb-2 p-2" key={comment.id}>
                             <div>
                                 <p>{comment.email}</p>
                                 <p>{comment.gender}</p>
@@ -29,7 +30,7 @@ const Comment = () => {
                             <div>
                                 <p>{comment.comment}</p>
                             </div>
-                        </div>
+                        </Card>
                     )
         }else{
             return null;
@@ -52,16 +53,16 @@ const Comment = () => {
         }
     }
 
-    const warningMsg = warning && <div className="alert alert-danger mt-5" role="alert">Veuillez compléter les champs</div>
+    const warningMsg = warning && <Alert color="danger" className="m-3">Veuillez compléter les champs</Alert>
 
 
     return(
         <div>
             {warningMsg}
 
-            {myComments}
-
             <AddComment addNewComment = {addNewComment}></AddComment>
+
+            {myComments}
 
         </div>
     )
